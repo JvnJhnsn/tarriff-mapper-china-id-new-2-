@@ -187,16 +187,6 @@ I also used Claude (in the Claude.ai web interface) during the build itself to:
 
 ---
 
-## 9. Reflection
-
-**What worked best:** The three-signal blend — HS structure + curated keywords + AI semantics — turned out to be much more robust than any single signal would have been. Each one catches what the others miss: HS digits anchor exact code lookups, keywords handle multi-language search, AI handles fuzzy semantic queries. The fact that the explanation field shows *which* signals fired makes the whole thing auditable, which is exactly what a customs broker would need.
-
-**Where ambiguity appeared:** Vague queries like "cotton t-shirt for men" still produce two close-confidence candidates (T-shirt and trousers), because both share the "men" + "cotton" tokens. The AI layer mostly resolves this, but it's a reminder that customs classification is genuinely hard — even human classifiers disagree on borderline cases. The right behaviour is what the app does: surface multiple candidates with explanations and let the user decide.
-
-**What I'd improve in v2:** First, populate the full HS-6 universe (~5,200 entries) using a one-shot batch generation pipeline. Second, add an embeddings-based similarity layer so semantic search works without an LLM call per query. Third, integrate ACFTA preferential rate lookup so the most economically relevant tariff (the one most importers actually use) is shown alongside the MFN rate. Fourth, add a "rationale chain" view that lets the user click through to see the AI's reasoning, the matching tokens, and the underlying HS path — full audit trail.
-
----
-
 ## 10. File structure
 
 ```
