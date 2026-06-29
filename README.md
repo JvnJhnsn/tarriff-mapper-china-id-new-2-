@@ -187,7 +187,7 @@ I also used Claude (in the Claude.ai web interface) during the build itself to:
 
 ---
 
-## 10. File structure
+## 9. File structure
 
 ```
 tariff-mapper/
@@ -202,7 +202,7 @@ No build step. No `package.json`. No node_modules. Just open `index.html` in a b
 
 ---
 
-## 11. Local development
+## 10. Local development
 
 ```bash
 # Clone or download
